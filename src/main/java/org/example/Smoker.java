@@ -30,14 +30,14 @@ public class Smoker extends Thread {
     public void run() {
         while (true) {
             smokeShop.getIngredient(this.ingredient);
-            System.out.println("El fumador " + ingredient + " va a fumar.");
+            System.out.println("El fumador " + ingredient + " con ingrediente " + smokeShop.getIngredients().get(ingredient) + " va a fumar.");
             try {
                 sleep(2200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            System.out.println("El fumador " + ingredient + " ha terminado de fumar.");
+            System.out.println("El fumador " + ingredient + " con ingrediente " + smokeShop.getIngredients().get(ingredient) + " ha terminado de fumar.");
         }
     }
 }

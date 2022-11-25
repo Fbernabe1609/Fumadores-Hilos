@@ -15,9 +15,27 @@ public class SmokeShop {
     public ArrayList<String> getIngredients() {
         return ingredients;
     }
+
+    public int getNotAvailable() {
+        return notAvailable;
+    }
+
+    public void setNotAvailable(int notAvailable) {
+        this.notAvailable = notAvailable;
+    }
+
+    public boolean isEmptyTable() {
+        return emptyTable;
+    }
+
+    public void setEmptyTable(boolean emptyTable) {
+        this.emptyTable = emptyTable;
+    }
+
     public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
     }
+
     public synchronized void putIngredient(int notAvailable) {
         while (this.emptyTable) {
             try {
@@ -30,6 +48,7 @@ public class SmokeShop {
         this.notAvailable = notAvailable;
         notifyAll();
     }
+
     public synchronized void getIngredient(int clientIngredient) {
         while (clientIngredient != this.notAvailable || !this.emptyTable) {
             try {

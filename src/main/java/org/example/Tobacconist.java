@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Tobacconist extends Thread {
     SmokeShop smokeShop;
 
@@ -21,7 +19,7 @@ public class Tobacconist extends Thread {
     public void run() {
         while (true) {
             int notAvailableProduct = (int) (Math.random() * 3);
-            System.out.println("El estanquero no pone el ingrediente: " + notAvailableProduct + "(" + smokeShop.getIngredients().get(notAvailableProduct) + ").");
+            System.out.println("El estanquero no pone el ingrediente " + notAvailableProduct + "(" + smokeShop.getIngredients().get(notAvailableProduct) + ").");
             smokeShop.putIngredient(notAvailableProduct);
             try {
                 sleep(2300);
