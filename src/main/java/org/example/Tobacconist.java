@@ -23,7 +23,7 @@ public class Tobacconist extends Thread {
             smokeShop.putIngredient(notAvailableProduct);
             System.out.println("El estanquero no pone el ingrediente " + notAvailableProduct + "(" + smokeShop.getIngredients().get(notAvailableProduct) + ").");
             try {
-                sleep(2300);
+                sleep(putTime);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

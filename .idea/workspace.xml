@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f79cf598-842e-4c1f-a0d9-fcf96a7dfe07" name="Changes" comment="Avance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SmokeShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SmokeShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Smoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Smoker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tobacconist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Tobacconist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669411224210</updated>
-      <workItem from="1669411225506" duration="5794000" />
+      <workItem from="1669411225506" duration="5874000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1669415753248</created>
@@ -116,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669416622809</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Avance">
+      <created>1669417042565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669417042565</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
