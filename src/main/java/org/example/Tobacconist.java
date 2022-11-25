@@ -1,7 +1,8 @@
 package org.example;
 
 public class Tobacconist extends Thread {
-    SmokeShop smokeShop;
+    private SmokeShop smokeShop;
+    private int putTime = 2300;
 
     public Tobacconist(SmokeShop smokeShop) {
         this.smokeShop = smokeShop;
@@ -19,8 +20,8 @@ public class Tobacconist extends Thread {
     public void run() {
         while (true) {
             int notAvailableProduct = (int) (Math.random() * 3);
-            System.out.println("El estanquero no pone el ingrediente " + notAvailableProduct + "(" + smokeShop.getIngredients().get(notAvailableProduct) + ").");
             smokeShop.putIngredient(notAvailableProduct);
+            System.out.println("El estanquero no pone el ingrediente " + notAvailableProduct + "(" + smokeShop.getIngredients().get(notAvailableProduct) + ").");
             try {
                 sleep(2300);
             } catch (InterruptedException e) {

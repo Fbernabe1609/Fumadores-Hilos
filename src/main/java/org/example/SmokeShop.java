@@ -8,8 +8,8 @@ public class SmokeShop {
     private boolean emptyTable = false;
     private ArrayList<String> ingredients = new ArrayList<>() {{
         add("Tabaco");
-        add("Fósforo");
         add("Papel");
+        add("Fósforo");
     }};
 
     public ArrayList<String> getIngredients() {
@@ -50,7 +50,7 @@ public class SmokeShop {
     }
 
     public synchronized void getIngredient(int clientIngredient) {
-        while (clientIngredient != this.notAvailable || !this.emptyTable) {
+        while (!this.emptyTable || clientIngredient != this.notAvailable) {
             try {
                 wait();
             } catch (InterruptedException e) {

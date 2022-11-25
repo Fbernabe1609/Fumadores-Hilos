@@ -5,6 +5,8 @@ public class Smoker extends Thread {
     private int ingredient;
     private SmokeShop smokeShop;
 
+    private int smokeTime = 2200;
+
     public Smoker(int ingredient, SmokeShop smokeShop) {
         this.ingredient = ingredient;
         this.smokeShop = smokeShop;
@@ -32,7 +34,7 @@ public class Smoker extends Thread {
             smokeShop.getIngredient(this.ingredient);
             System.out.println("El fumador " + ingredient + " con ingrediente " + smokeShop.getIngredients().get(ingredient) + " va a fumar.");
             try {
-                sleep(2200);
+                sleep(smokeTime);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
