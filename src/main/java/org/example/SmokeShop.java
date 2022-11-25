@@ -6,25 +6,18 @@ public class SmokeShop {
 
     private int notAvailable;
     private boolean emptyTable = false;
-
     private ArrayList<String> ingredients = new ArrayList<>() {{
         add("Tabaco");
         add("Fósforo");
         add("Papel");
     }};
 
-    public synchronized void getIngredient(int clientIngredient) {
-        while (clientIngredient != this.notAvailable || !this.emptyTable) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        this.emptyTable = false;
-        notify();
+    public ArrayList<String> getIngredients() {
+        return ingredients;
     }
-
+    public void setIngredients(ArrayList<String> ingredients) {
+        this.ingredients = ingredients;
+    }
     public synchronized void putIngredient(int notAvailable) {
         while (this.emptyTable) {
             try {
@@ -35,7 +28,17 @@ public class SmokeShop {
         }
         this.emptyTable = true;
         this.notAvailable = notAvailable;
-        System.out.println("El estanquero no pone el ingrediente: " + notAvailable + "(" + ingredients.get(notAvailable) + ").");
         notifyAll();
+    }
+    public synchronized void getIngredient(int clientIngredient) {
+        while (clientIngredient != this.notAvailable || !this.emptyTable) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        this.emptyTable = false;
+        notify();
     }
 }
